@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { getAllPlants } from '../helpers/data/plantData';
-import PlantsCard from '../components/Cards/PlantsCard';
+import { getPlantById } from '../helpers/data/plantData';
+import PlantDetailsCard from '../components/Cards/PlantDetailsCard';
 
 export default class Plants extends Component {
   state = {
@@ -8,11 +8,12 @@ export default class Plants extends Component {
   };
 
   componentDidMount() {
-    this.getPlants();
+    const plantId = this.props.match.params.id;
+    this.getAPlant(plantId);
   }
 
-  getPlants = () => {
-    getAllPlants().then((response) => {
+  getAPlant = (plantId) => {
+    getPlantById(plantId).then((response) => {
       this.setState({
         plants: response,
       });
@@ -22,11 +23,10 @@ export default class Plants extends Component {
   render() {
     const { plants } = this.state;
     const showPlants = () => (
-      plants.map((plant) => <PlantsCard key={plant.firebaseKey} plant={plant} />)
+     <PlantDetailsCard key={plants.firebaseKey} plant={plants} />
     );
     return (
       <div>
-        <h1 className="text-white">Plants</h1>
         <div className='plants d-flex flex-wrap justify-content-center'>
           {showPlants()}
           </div>

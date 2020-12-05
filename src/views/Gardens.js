@@ -4,7 +4,7 @@ export default class Gardens extends Component {
   render() {
     return (
       <div>
-        <h1>Gardens</h1>
+        <h1 className="text-white">Gardens</h1>
       </div>
     );
   }

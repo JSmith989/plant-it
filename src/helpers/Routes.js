@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import Home from '../views/Home';
 import Plants from '../views/Plants';
 import Gardens from '../views/Gardens';
+import PlantDetails from '../views/PlantDetails';
 import NotFound from '../views/NotFound';
 
 export default function Routes({ user }) {
@@ -20,6 +21,12 @@ export default function Routes({ user }) {
         component={Plants}
         user={user}
       />
+      <PrivateRoute
+          exact
+          path='/plants/:id'
+          component={PlantDetails}
+          user={user}
+        />
       <PrivateRoute
         exact
         path='/gardens'
