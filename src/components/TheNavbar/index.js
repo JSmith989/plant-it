@@ -41,7 +41,7 @@ export default function TheNavbar(props) {
           {
             user
             && <>
-              <img className="userInfo" src={user?.photoURL} alt={user?.displayName} />
+              <img className="userInfo rounded-circle" src={user?.photoURL} alt={user?.displayName} />
               <UncontrolledDropdown>
               <DropdownToggle nav caret>
               </DropdownToggle>
