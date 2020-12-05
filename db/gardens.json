@@ -1,0 +1,29 @@
+{
+    "garden1": {
+        "name": "Raised bed",
+        "soilType": "Sandy Loam",
+        "sunType": "Full Sun",
+        "firebaseKey": "garden1",
+        "userId": "",
+        "image": "https://www.thenavagepatch.com/wp-content/uploads/2018/05/DIY-Raised-Garden-Beds-F014.jpg",
+        "zone": 7
+    },
+    "garden2": {
+        "name": "Raised bed 2",
+        "soilType": "Loam",
+        "sunType": "Full Sun",
+        "firebaseKey": "garden2",
+        "userId": "",
+        "image": "https://www.thenavagepatch.com/wp-content/uploads/2018/05/DIY-Raised-Garden-Beds-F014.jpg",
+        "zone": 7
+    },
+    "garden3": {
+        "name": "Raised bed 3",
+        "soilType": "Rich Soil",
+        "sunType": "Partial Sun",
+        "firebaseKey": "garden3",
+        "userId": "",
+        "image": "https://www.thenavagepatch.com/wp-content/uploads/2018/05/DIY-Raised-Garden-Beds-F014.jpg",
+        "zone": 7
+    }
+}
