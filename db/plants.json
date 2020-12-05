@@ -1,0 +1,38 @@
+{
+    "plant1": {
+        "name": "Arugula",
+        "zone": "3-9",
+        "germination": "4-8 days",
+        "spacing": "4-6 inches",
+        "depth": "1/8 inch",
+        "notes": "If sowing indoors, sow seeds 4-6 weeks before the last spring frost. If sowing directly, sow seeds 1-2 weeks before last frost. Growth stays low and compact until heat causes plant to bolt.",
+        "harvesting": "Harvest by picking off the tender outside leaves at the base ofr the plant around 2 weeks after planting, while leaving the center intact. Make new sowings every 2-3 weeks to extend your harvest",
+        "image": "https://www.almanac.com/sites/default/files/image_nodes/arugula.jpg",
+        "firebaseKey": "plant1",
+        "userId": ""
+    },
+    "plant2": {
+        "name": "Asparagus",
+        "zone": "3-8",
+        "germination": "10-15 days",
+        "spacing": "12-18 inches",
+        "depth": "1/2 inch",
+        "notes": "If sowing indoors, sow seeds 8-12 weeks before the last pring frost. Transplant seedlings outdoors after the threate of frost has passed when they are 6-10 inches tall and have 4-6 stems with several buds coming from the crown. If sowing directly, sow seeds 3 weeks before the last spring frost.",
+        "harvesting": "Do not harvest asparagus the first year. Allow the plants to grow so you will have stronger plants the following year. When plants are two years old you can harvest for a short period. The third year you can harvest every 4 weeks",
+        "image": "https://gardenerspath.com/wp-content/uploads/2020/02/Young-Asparagus-Spears-Growing-in-the-Garden.jpg",
+        "firebaseKey": "plant2",
+        "userId": ""
+    },
+    "plant3": {
+        "name": "Beet",
+        "zone": "2-10",
+        "germination": "7-10 days",
+        "spacing": "6-12 inches",
+        "depth": "1/2 inch",
+        "notes": "Prior to sowing, soak seeds in a glass of water for 24 hours for easier germination. If sowing indoors, sow seeds 6-8 weeks before the last spring frost. Transplant seedlings outdoors into the garden after threat of frost has passed. If sowing directly, sow seeds 4 weeks before the last spring frost. Beet seeds are clusters so they may require more thinning than expected.",
+        "harvesting": "Harvest while the soil is dry. Greens can be picked when they are 4-6 inches long and the roots are 2 inches or less in diameter. Harvest roots at 1 inch for baby beets and up to 3 inches for mature beets.",
+        "image": "https://cdn.shopify.com/s/files/1/1992/8047/articles/4_1_852x.jpg?v=1537934890",
+        "firebaseKey": "plant3",
+        "userId": ""
+    }
+}
