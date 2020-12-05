@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import getAllPlants from '../helpers/data/plantData';
+import { getAllPlants } from '../helpers/data/plantData';
 import PlantsCard from '../components/Cards/PlantsCard';
 
 export default class Plants extends Component {
@@ -12,7 +12,7 @@ export default class Plants extends Component {
   }
 
   getPlants = () => {
-    getAllPlants.getAllPlants().then((response) => {
+    getAllPlants().then((response) => {
       this.setState({
         plants: response,
       });
@@ -26,7 +26,7 @@ export default class Plants extends Component {
     );
     return (
       <div>
-        <h1>Plants</h1>
+        <h1 className="text-white">Plants</h1>
         <div className='plants d-flex flex-wrap justify-content-center'>
           {showPlants()}
           </div>

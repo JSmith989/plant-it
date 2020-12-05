@@ -8,4 +8,10 @@ const getAllPlants = () => new Promise((resolve, reject) => {
   }).catch((error) => reject(error));
 });
 
-export default { getAllPlants };
+const getPlantById = (plantId) => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/plants/${plantId}.json`).then((response) => {
+    resolve(response.data);
+  }).catch((error) => reject(error));
+});
+
+export { getAllPlants, getPlantById };
