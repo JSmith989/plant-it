@@ -12,7 +12,7 @@ export default class Auth extends Component {
   render() {
     return (
       <div className='Auth'>
-        <button className='btn btn-secondary' onClick={this.loginClickEvent}>
+        <button className='btn btn-warning' onClick={this.loginClickEvent}>
           Sign In
         </button>
       </div>
