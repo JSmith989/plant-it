@@ -5,6 +5,7 @@ import Home from '../views/Home';
 import Plants from '../views/Plants';
 import Gardens from '../views/Gardens';
 import PlantDetails from '../views/PlantDetails';
+import GardenDetails from '../views/GardenDetails';
 import NotFound from '../views/NotFound';
 
 export default function Routes({ user }) {
@@ -25,6 +26,12 @@ export default function Routes({ user }) {
           exact
           path='/plants/:id'
           component={PlantDetails}
+          user={user}
+        />
+      <PrivateRoute
+          exact
+          path='/gardens/:id'
+          component={GardenDetails}
           user={user}
         />
       <PrivateRoute
