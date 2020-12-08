@@ -28,7 +28,7 @@ export default class Gardens extends Component {
     return (
       <div>
         <h1 className="text-white">Gardens</h1>
-        <Carousel>
+        <Carousel gardens={gardens}>
           {showGardens()}
         </Carousel>
       </div>
