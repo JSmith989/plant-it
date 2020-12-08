@@ -1,38 +1,59 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, {
-  Navigation, Scrollbar,
-} from 'swiper';
+import React, { useState } from 'react';
+import {
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption,
+} from 'reactstrap';
+import { Link } from 'react-router-dom';
 
-// Import Swiper styles
-import 'swiper/swiper.scss';
-import 'swiper/components/navigation/navigation.scss';
-import 'swiper/components/scrollbar/scrollbar.scss';
+const MyCarousel = (props) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const items = props.gardens;
 
-SwiperCore.use([Navigation, Scrollbar]);
+  const next = () => {
+    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+    setActiveIndex(nextIndex);
+  };
 
-export default function Carousel(props) {
-  const showChildren = () => props.gardens.map((garden) => (
-      <SwiperSlide id={garden.firebaseKey} key={garden.firebaseKey}> {props.children}</SwiperSlide>));
+  const previous = () => {
+    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+    setActiveIndex(nextIndex);
+  };
 
-  const myGarden = props.gardens.map((garden) => garden.firebaseKey);
+  const goToIndex = (newIndex) => {
+    setActiveIndex(newIndex);
+  };
 
-  console.warn(showChildren());
+  const slides = items.map((item) => (
+      <CarouselItem
+        className="carouselContent"
+        tag="div"
+        key={item.firebaseKey}
+
+      >
+          <Link to={`/gardens/${item.firebaseKey}`}>
+      <img className='card-img-top border border-white' src={item.image} alt='Card cap' />
+        </Link>
+          <CarouselCaption className="carouselText" captionText={item.name}/>
+      </CarouselItem>
+  ));
 
   return (
-    <Swiper
-      id={myGarden[0]}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      spaceBetween={50}
-      slidesPerView={3}
-      onSlideChange={() => ('slide change')}
-      onSwiper={(swiper) => (swiper)}
-    >
-        {showChildren()}
-      {/* <SwiperSlide id={myGarden} >{props.children}</SwiperSlide> */}
-      ...
-    </Swiper>
+    <div>
+      <Carousel
+        activeIndex={activeIndex}
+        next={next}
+        previous={previous}
+      >
+        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+        {slides}
+        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+      </Carousel>
+    </div>
   );
-}
+};
+
+export default MyCarousel;
