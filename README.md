@@ -9,6 +9,6 @@ https://www.figma.com/file/rXhu6Qrb3Y049LNdWDc5y5/Plant-It?node-id=0%3A1
 ![wireframe](images/plantItWireframe.png)
 
 ## ERD
-https://lucid.app/lucidchart/850e28d8-cdac-42f8-b2f2-4be8ab5f690a/edit?beaconFlowId=7C97A2C1BFB3974E&page=0_0#?folder_id=home&browser=icon
+https://user-images.githubusercontent.com/67443077/101420436-c6c67e80-38b7-11eb-8e44-9547a555ae18.png
 ![ERD](images/plantItERD.png)
 
