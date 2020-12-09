@@ -5,7 +5,7 @@ import {
   Button, Form, FormGroup, Label, Input,
 } from 'reactstrap';
 import getUser from '../../helpers/data/authData';
-import { createGarden } from '../../helpers/data/gardenData';
+import { createGarden, updateGarden } from '../../helpers/data/gardenData';
 
 export default class GardenForm extends Component {
   state = {
@@ -49,6 +49,11 @@ export default class GardenForm extends Component {
       createGarden(this.state)
         .then(() => {
           this.props.onUpdate();
+        });
+    } else {
+      updateGarden(this.state)
+        .then(() => {
+          this.props.onUpdate(this.state.firebaseKey);
         });
     }
   }
