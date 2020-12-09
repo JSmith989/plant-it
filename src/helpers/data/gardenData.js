@@ -27,6 +27,8 @@ const createGarden = (data) => axios.post(`${baseUrl}/gardens.json`, data).then(
     .catch((error) => console.warn(error));
 });
 
+const updateGarden = (dataObj) => axios.patch(`${baseUrl}/gardens/${dataObj.firebaseKey}.json`, dataObj);
+
 export {
-  getAllGardens, getGardenById, createGarden, getUsersGardens,
+  getAllGardens, getGardenById, createGarden, getUsersGardens, updateGarden,
 };
