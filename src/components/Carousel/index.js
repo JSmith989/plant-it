@@ -34,7 +34,7 @@ const MyCarousel = (props) => {
 
       >
           <Link to={`/gardens/${item.firebaseKey}`}>
-      <img className='card-img-top border border-white' src={item.image} alt='Card cap' />
+      <img className='card-img-top' src={item.image} alt='Card cap' />
         </Link>
           <CarouselCaption className="carouselText" captionText={item.name}/>
       </CarouselItem>
