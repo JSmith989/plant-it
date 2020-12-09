@@ -117,7 +117,7 @@ export default class GardenForm extends Component {
           />
         </FormGroup>
         <FormGroup>
-          <Label for='gardenImage'>Image</Label>
+          <Label for='gardenImage'>Image URL</Label>
           <Input
            type='url'
            name='image'
@@ -129,7 +129,7 @@ export default class GardenForm extends Component {
           />
         </FormGroup>
         <FormGroup>
-          <Label for='gardenFile'>File</Label>
+          <Label for='gardenFile'>Upload Image</Label>
           <Input
             type='file'
             name='filename'
