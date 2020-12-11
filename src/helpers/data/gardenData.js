@@ -29,6 +29,29 @@ const createGarden = (data) => axios.post(`${baseUrl}/gardens.json`, data).then(
 
 const updateGarden = (dataObj) => axios.patch(`${baseUrl}/gardens/${dataObj.firebaseKey}.json`, dataObj);
 
+const deleteGarden = (gardenId) => axios.delete(`${baseUrl}/gardens/${gardenId}.json`);
+
+const getGardensPlants = (gardenId) => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/gardens-plants.json?orderBy="gardenId"&equalTo="${gardenId}"`).then((response) => {
+    resolve(Object.values(response.data));
+  }).catch((error) => reject(error));
+});
+
+const deleteGardenTable = (gardenId) => new Promise((resolve, reject) => {
+  axios.get(`${baseUrl}/gardens-plants.json?orderBy="gardenId"&equalTo="${gardenId}"`).then((response) => {
+    Object.keys(response.data).forEach((firebaseKey) => {
+      axios.delete(`${baseUrl}/gardens-plants/${firebaseKey}.json`);
+    });
+  }).then(resolve).catch((error) => reject(error));
+});
+
 export {
-  getAllGardens, getGardenById, createGarden, getUsersGardens, updateGarden,
+  getAllGardens,
+  getGardenById,
+  createGarden,
+  getUsersGardens,
+  updateGarden,
+  deleteGarden,
+  getGardensPlants,
+  deleteGardenTable,
 };
