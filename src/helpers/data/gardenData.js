@@ -29,6 +29,13 @@ const createGarden = (data) => axios.post(`${baseUrl}/gardens.json`, data).then(
 
 const updateGarden = (dataObj) => axios.patch(`${baseUrl}/gardens/${dataObj.firebaseKey}.json`, dataObj);
 
+const deleteGarden = (gardenId) => axios.delete(`${baseUrl}/gardens/${gardenId}.json`);
+
 export {
-  getAllGardens, getGardenById, createGarden, getUsersGardens, updateGarden,
+  getAllGardens,
+  getGardenById,
+  createGarden,
+  getUsersGardens,
+  updateGarden,
+  deleteGarden,
 };

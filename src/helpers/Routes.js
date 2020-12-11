@@ -6,7 +6,7 @@ import Plants from '../views/Plants';
 import Gardens from '../views/Gardens';
 import PlantDetails from '../views/PlantDetails';
 import GardenDetails from '../views/GardenDetails';
-import NotFound from '../views/NotFound';
+// import NotFound from '../views/NotFound';
 
 export default function Routes({ user }) {
   return (
@@ -40,7 +40,7 @@ export default function Routes({ user }) {
         component={Gardens}
         user={user}
       />
-      <Route component={NotFound} />
+      <Route component={Home} />
     </Switch>
   );
 }

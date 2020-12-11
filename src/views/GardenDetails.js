@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getGardenById } from '../helpers/data/gardenData';
+import { getGardenById, deleteGarden } from '../helpers/data/gardenData';
 import GardenDetailsCard from '../components/Cards/GardenDetailsCard';
 import MyModal from '../components/MyModal';
 import GardenForm from '../components/Forms/GardenForm';
@@ -22,10 +22,18 @@ export default class Gardens extends Component {
     });
   };
 
+  demolishGarden = (e) => {
+    deleteGarden(e.target.id);
+    setTimeout(() => {
+      this.props.history.push('/gardens');
+    }, 500);
+  }
+
   render() {
+    console.warn(this.props);
     const { gardens } = this.state;
     const showGardens = () => (
-     <GardenDetailsCard key={gardens.firebaseKey} garden={gardens} />
+     <GardenDetailsCard key={gardens.firebaseKey} garden={gardens} demolishGarden={this.demolishGarden}/>
     );
     return (
       <div>
