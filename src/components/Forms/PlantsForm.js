@@ -67,16 +67,16 @@ export default class PlantsForm extends Component {
 
     if (this.state.firebaseKey === '') {
       const newPlant = {
-        depth: this.props.plant?.depth || '',
-        firebaseKey: this.props.plant?.firebaseKey || '',
-        germination: this.props.plant?.germination || '',
-        harvesting: this.props.plant?.harvesting || '',
-        image: this.props.plant?.image || '',
-        name: this.props.plant?.name || '',
-        notes: this.props.plant?.notes || '',
-        spacing: this.props.plant?.spacing || '',
-        userId: this.props.plant?.userId || '',
-        zone: this.props.plant?.zone || '',
+        depth: this.state.depth,
+        firebaseKey: this.state.firebaseKey,
+        germination: this.state.germination,
+        harvesting: this.state.harvesting,
+        image: this.state.image,
+        name: this.state.name,
+        notes: this.state.notes,
+        spacing: this.state.spacing,
+        userId: this.state.userId,
+        zone: this.state.zone,
       };
       createPlant(newPlant)
         .then((response) => {
@@ -91,16 +91,16 @@ export default class PlantsForm extends Component {
         });
     } else {
       const plantUpdate = {
-        depth: this.props.plant?.depth || '',
-        firebaseKey: this.props.plant?.firebaseKey || '',
-        germination: this.props.plant?.germination || '',
-        harvesting: this.props.plant?.harvesting || '',
-        image: this.props.plant?.image || '',
-        name: this.props.plant?.name || '',
-        notes: this.props.plant?.notes || '',
-        spacing: this.props.plant?.spacing || '',
-        userId: this.props.plant?.userId || '',
-        zone: this.props.plant?.zone || '',
+        depth: this.state.depth,
+        firebaseKey: this.state.firebaseKey,
+        germination: this.state.germination,
+        harvesting: this.state.harvesting,
+        image: this.state.image,
+        name: this.state.name,
+        notes: this.state.notes,
+        spacing: this.state.spacing,
+        userId: this.state.userId,
+        zone: this.state.zone,
       };
       deleteKeyValue(this.state.firebaseKey);
       updatePlant(plantUpdate)

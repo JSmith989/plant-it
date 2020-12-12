@@ -15,7 +15,7 @@ export default class GardenDropdown extends Component {
     const currentUserId = getUid();
     getUsersGardens(currentUserId).then((response) => {
       this.setState({
-        boards: response,
+        gardens: response,
       });
     });
   }
