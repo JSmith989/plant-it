@@ -26,8 +26,8 @@ export default class GardenDropdown extends Component {
       gardens.map((garden) => <option key={garden.firebaseKey} value={garden.firebaseKey}>{garden.name}</option>)
     );
     return (
-        <div class="form-group">
-        <select class="form-control"
+        <div className="form-group">
+        <select className="form-control"
         name="gardenId"
         onChange={this.props.onChange}>
           <option value=''>Choose Garden</option>
