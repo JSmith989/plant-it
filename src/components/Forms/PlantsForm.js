@@ -85,7 +85,9 @@ export default class PlantsForm extends Component {
             plantId: response.data.firebaseKey,
             userId: this.state.userId,
           };
-          createGardenPlant(joinTableObject);
+          if (this.state.gardenId !== '') {
+            createGardenPlant(joinTableObject);
+          }
         }).then(() => {
           this.props.onUpdate(this.props.gardenId);
         });
@@ -110,7 +112,9 @@ export default class PlantsForm extends Component {
             plantId: this.state.firebaseKey,
             userId: this.state.userId,
           };
-          createGardenPlant(updatedTable);
+          if (this.state.gardenId !== '') {
+            createGardenPlant(updatedTable);
+          }
           this.props.onUpdate(this.props.plant.firebaseKey);
         });
     }

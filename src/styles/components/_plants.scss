@@ -1,5 +1,11 @@
 // .plants {
 //         display: flex;
+//         flex-direction: row;
 //         flex-wrap: wrap;
 //         justify-content: center;
 // }
+
+.plantsCard {
+    max-width: 500px;
+    max-height: 350px;
+}
