@@ -40,7 +40,6 @@ export default class Plants extends Component {
         <MyModal title={'Add Plant'} buttonLabel={'Add Plant'}>
           <PlantsForm plant={plants} gardens={gardens} onUpdate={this.getPlants}/>
             </MyModal>
-        <h1 className="text-white">Plants</h1>
         <div className='plants d-flex flex-wrap justify-content-center'>
           {showPlants()}
           </div>
