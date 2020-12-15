@@ -55,6 +55,12 @@ export default class Gardens extends Component {
   }
 
   removePlant = (e) => {
+    const deleted = this.state.plants.filter((plant) => plant.firebaseKey !== e.target.id);
+
+    this.setState({
+      plants: deleted,
+    });
+
     deleteKeyValue(e.target.id);
   }
 
