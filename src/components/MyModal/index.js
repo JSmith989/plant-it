@@ -27,7 +27,7 @@ const MyModal = (props) => {
           {props.children}
         </ModalBody>
         <ModalFooter>
-          <Button color='warning' onClick={toggle}>
+          <Button outline color='danger' onClick={toggle}>
             Cancel
           </Button>
         </ModalFooter>

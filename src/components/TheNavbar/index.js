@@ -13,6 +13,8 @@ import {
   DropdownMenu,
   DropdownItem,
 } from 'reactstrap';
+import Search from '../Search';
+import MyModal from '../MyModal';
 
 export default function TheNavbar(props) {
   const logMeOut = (e) => {
@@ -38,6 +40,9 @@ export default function TheNavbar(props) {
               </Link>
             </NavItem>
           </Nav>
+          <MyModal title={'Search'} buttonLabel={'Search'}>
+          <Search />
+          </MyModal>
           {
             user
             && <>
