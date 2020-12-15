@@ -15,7 +15,7 @@ export default function GardenDetailsCard({ garden, demolishGarden }) {
             demolishGarden(e);
           }}
         >
-          Delete
+          Delete Garden
         </button>
       </div>
     </div>

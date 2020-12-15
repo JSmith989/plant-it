@@ -45,6 +45,8 @@ const deleteKeyValue = (plantId) => axios.get(`${baseUrl}/gardens-plants.json?or
     });
   });
 
+const deletePlant = (plantId) => axios.delete(`${baseUrl}/plants/${plantId}.json`);
+
 const updatePlant = (dataObject) => axios.patch(`${baseUrl}/plants/${dataObject.firebaseKey}.json`, dataObject);
 
 export {
@@ -54,4 +56,5 @@ export {
   createGardenPlant,
   deleteKeyValue,
   updatePlant,
+  deletePlant,
 };

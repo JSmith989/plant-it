@@ -5,11 +5,11 @@ import {
   getGardensPlants,
   deleteGardenTable,
 } from '../helpers/data/gardenData';
-import { getPlantById } from '../helpers/data/plantData';
+import { getPlantById, deleteKeyValue } from '../helpers/data/plantData';
 import GardenDetailsCard from '../components/Cards/GardenDetailsCard';
-import PlantsCard from '../components/Cards/PlantsCard';
 import MyModal from '../components/MyModal';
 import GardenForm from '../components/Forms/GardenForm';
+import GardenPlantsCard from '../components/Cards/GardenPlantsCard';
 
 export default class Gardens extends Component {
   state = {
@@ -54,17 +54,27 @@ export default class Gardens extends Component {
     }, 500);
   }
 
+  removePlant = (e) => {
+    const deleted = this.state.plants.filter((plant) => plant.firebaseKey !== e.target.id);
+
+    this.setState({
+      plants: deleted,
+    });
+
+    deleteKeyValue(e.target.id);
+  }
+
   render() {
     const { gardens, plants } = this.state;
     const gardenDetails = () => (
      <GardenDetailsCard key={gardens.firebaseKey} garden={gardens} demolishGarden={this.demolishGarden}/>
     );
     const showPlants = () => (
-      plants.map((plant) => <PlantsCard key={plant.firebaseKey} plant={plant} />)
+      plants.map((plant) => <GardenPlantsCard key={plant.firebaseKey} plant={plant} removePlant={this.removePlant} />)
     );
     return (
       <div>
-        <MyModal title={'Update'} buttonLabel={'Update'}>
+        <MyModal title={'Update Garden'} buttonLabel={'Update Garden'}>
         { Object.keys(gardens).length && <GardenForm garden={gardens} onUpdate={this.getAGarden} />}
         </MyModal>
         <div className='d-flex justify-content-center'>

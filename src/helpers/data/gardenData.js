@@ -20,11 +20,15 @@ const getGardenById = (gardenId) => new Promise((resolve, reject) => {
   }).catch((error) => reject(error));
 });
 
-const createGarden = (data) => axios.post(`${baseUrl}/gardens.json`, data).then((response) => {
-  const update = { firebaseKey: response.data.name };
-  axios
-    .patch(`${baseUrl}/gardens/${response.data.name}.json`, update)
-    .catch((error) => console.warn(error));
+const createGarden = (data) => new Promise((resolve, reject) => {
+  axios.post(`${baseUrl}/gardens.json`, data).then((response) => {
+    const update = { firebaseKey: response.data.name };
+    axios
+      .patch(`${baseUrl}/gardens/${response.data.name}.json`, update).then((patchResponse) => {
+        resolve(patchResponse);
+      })
+      .catch((error) => reject(error));
+  });
 });
 
 const updateGarden = (dataObj) => axios.patch(`${baseUrl}/gardens/${dataObj.firebaseKey}.json`, dataObj);
