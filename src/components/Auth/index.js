@@ -13,7 +13,7 @@ export default class Auth extends Component {
     return (
       <div className='Auth'>
         <button className='btn btn-warning' onClick={this.loginClickEvent}>
-          Sign In
+        <i class="fas fa-sign-in-alt"></i> Sign In
         </button>
       </div>
     );

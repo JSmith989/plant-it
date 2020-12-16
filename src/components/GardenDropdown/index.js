@@ -8,10 +8,10 @@ export default class GardenDropdown extends Component {
   };
 
   componentDidMount() {
-    this.getBoards();
+    this.getGardens();
   }
 
-  getBoards = () => {
+  getGardens = () => {
     const currentUserId = getUid();
     getUsersGardens(currentUserId).then((response) => {
       this.setState({

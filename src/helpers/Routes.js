@@ -6,7 +6,7 @@ import Plants from '../views/Plants';
 import Gardens from '../views/Gardens';
 import PlantDetails from '../views/PlantDetails';
 import GardenDetails from '../views/GardenDetails';
-// import NotFound from '../views/NotFound';
+import SearchResults from '../views/SearchResults';
 
 export default function Routes({ user }) {
   return (
@@ -40,6 +40,12 @@ export default function Routes({ user }) {
         component={Gardens}
         user={user}
       />
+      <PrivateRoute
+          exact
+          path='/search/:term'
+          component={(props) => <SearchResults {...props} />}
+          user={user}
+        />
       <Route component={Home} />
     </Switch>
   );
