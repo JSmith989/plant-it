@@ -22,8 +22,8 @@ export default class SearchResults extends Component {
   };
 
   performSearch = () => {
-    const searchTerm = this.props.match.params.term;
-    const plantResults = this.state.plants.filter((plant) => plant.name.includes(searchTerm));
+    const searchTerm = this.props.match.params.term.toLowerCase();
+    const plantResults = this.state.plants.filter((plant) => plant.name.toLowerCase().includes(searchTerm));
     this.setState({
       results: plantResults,
       searchTerm,
