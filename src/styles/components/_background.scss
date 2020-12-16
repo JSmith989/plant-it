@@ -1,0 +1,10 @@
+$backgroundIMG: url(https://sites.psu.edu/emilykohler/files/2016/03/vegetable-set-3.jpg);
+
+body { 
+    background: $backgroundIMG no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+  }

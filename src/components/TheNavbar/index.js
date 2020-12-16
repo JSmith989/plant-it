@@ -27,7 +27,7 @@ export default function TheNavbar(props) {
   return (
     <div>
       <Navbar color='dark' dark expand='md' className='justify-content-between'>
-        <Link className="navbar-brand" to='/'>Plant-It</Link>
+        <Link className="navTitle navbar-brand" to='/'>Plant-It</Link>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className='mr-auto' navbar>

@@ -8,7 +8,7 @@ export default function PlantsCard({ plant }) {
       <img className='plantsCard card-img-top rounded-pill border border-white' src={plant.image} alt='Card cap' />
         </Link>
       <div className='card-body'>
-        <h5 className='card-title text-white '>{plant.name}</h5>
+        <h2 className='card-title text-white '>{plant.name}</h2>
       </div>
     </div>
   );
