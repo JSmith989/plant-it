@@ -37,7 +37,7 @@ export default class Plants extends Component {
        );
        return (
       <div>
-        <MyModal title={'Add Plant'} buttonLabel={'Add Plant'}>
+        <MyModal title={'Add Plant'} buttonLabel={'Add Plant'} >
           <PlantsForm plant={plants} gardens={gardens} onUpdate={this.getPlants}/>
             </MyModal>
         <div className='plants d-flex flex-wrap justify-content-center'>

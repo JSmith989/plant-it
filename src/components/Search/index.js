@@ -33,7 +33,7 @@ class SearchInput extends Component {
           onChange={this.handleChange}
           className="form-control mr-sm-2"
         />
-        <button className='btn btn-outline-success my-2 my-sm-0' type='submit'>
+        <button className='btn btn-info my-2 my-sm-0' type='submit'>
           Search
         </button>
       </form>
