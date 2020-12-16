@@ -27,6 +27,7 @@ export default class PlantsForm extends Component {
     userId: this.props.plant?.userId || '',
     zone: this.props.plant?.zone || '',
     gardenId: this.props.plant?.gardenId || '',
+    successAlert: false,
   };
 
   componentDidMount() {
@@ -90,6 +91,7 @@ export default class PlantsForm extends Component {
           }
         }).then(() => {
           this.props.onUpdate(this.props.gardenId);
+          this.setState({ successAlert: true });
         });
     } else {
       const plantUpdate = {
@@ -116,6 +118,7 @@ export default class PlantsForm extends Component {
             createGardenPlant(updatedTable);
           }
           this.props.onUpdate(this.props.plant.firebaseKey);
+          this.setState({ successAlert: true });
         });
     }
   }
@@ -123,6 +126,7 @@ export default class PlantsForm extends Component {
   render() {
     return (
       <Form onSubmit={this.handleSubmit}>
+        { this.state.successAlert && (<div className="alert alert-success m-2" role="alert">Success! <i className="far fa-smile fa-sm"></i></div>)}
           <GardenDropdown onChange={this.handleChange} />
         <FormGroup>
           <Label for='plantName'>Name</Label>

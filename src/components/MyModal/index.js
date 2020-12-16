@@ -4,7 +4,6 @@ import {
   Modal,
   ModalHeader,
   ModalBody,
-  ModalFooter,
 } from 'reactstrap';
 
 const MyModal = (props) => {
@@ -22,15 +21,10 @@ const MyModal = (props) => {
       </Button>
       </div>
       <Modal isOpen={modal} toggle={toggle} className={className}>
-        <ModalHeader toggle={toggle}>{title}</ModalHeader>
-        <ModalBody>
+        <ModalHeader className="myModalHeader" toggle={toggle}>{title}</ModalHeader>
+        <ModalBody className="myModal">
           {props.children}
         </ModalBody>
-        <ModalFooter>
-          <Button outline color='danger' onClick={toggle}>
-            Cancel
-          </Button>
-        </ModalFooter>
       </Modal>
     </div>
   );

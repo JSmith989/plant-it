@@ -16,6 +16,7 @@ export default class GardenForm extends Component {
     sunType: this.props.garden?.sunType || '',
     zone: this.props.garden?.zone || '',
     userId: this.props.garden?.userId || '',
+    successAlert: false,
   };
 
   componentDidMount() {
@@ -49,11 +50,13 @@ export default class GardenForm extends Component {
       createGarden(this.state)
         .then(() => {
           this.props.onUpdate();
+          this.setState({ successAlert: true });
         });
     } else {
       updateGarden(this.state)
         .then(() => {
           this.props.onUpdate(this.state.firebaseKey);
+          this.setState({ successAlert: true });
         });
     }
   }
@@ -61,6 +64,7 @@ export default class GardenForm extends Component {
   render() {
     return (
       <Form onSubmit={this.handleSubmit}>
+        { this.state.successAlert && (<div className="alert alert-success m-2" role="alert">Success! <i className="far fa-smile fa-sm"></i></div>)}
         <FormGroup>
           <Label for='gardenName'>Name</Label>
           <Input
