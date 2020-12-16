@@ -16,7 +16,7 @@ const MyModal = (props) => {
 
   return (
     <div>
-        <div className="p-3">
+        <div className="myModal p-3">
       <Button color='warning' onClick={toggle}>
         {buttonLabel}
       </Button>
