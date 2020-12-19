@@ -2,9 +2,14 @@
 Planning/info app for your backyard garden. Backyard gardening has been a growing hobby(pun intended) especially this crazy year we call 2020. A few of the challenges people run into are not knowing enough details and forgetting what you've planted. One of the features this planting has is a map of the US that will show the zones so you know when to get your garden started. There will be an area where you can choose a vegetable that is already in the database or you can create your own. You can add plants to your garden and plan it out so you're not surprised when a cucumber is growing from where you thought your zucchini was.
 
 ## Deployed
-https://plant-it-capstone.web.app/
+https://plant-it-capstone.web.app/ 
 
-## Loom
+## Screenshots
+![homePage](https://user-images.githubusercontent.com/67443077/102680113-1855ef80-417b-11eb-960f-bbd8f488b431.png)
+![plantsCard](https://user-images.githubusercontent.com/67443077/102680114-19871c80-417b-11eb-896d-1068f189a348.png)
+![gardenCarousel](https://user-images.githubusercontent.com/67443077/102680115-1b50e000-417b-11eb-8349-5423fe8caf7c.png)
+
+## Capstone Proposal
 https://www.loom.com/share/f442d0120c9940218b91295524a92b5a
 
 ## Wireframe
