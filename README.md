@@ -16,7 +16,7 @@ https://lucid.app/lucidchart/850e28d8-cdac-42f8-b2f2-4be8ab5f690a/edit?beaconFlo
 ![ERD](https://user-images.githubusercontent.com/67443077/101420610-2e7cc980-38b8-11eb-99cb-69587fde3046.png)
 
 ## Code Snippet
-`````
+```
   const slides = items.map((item) => (
       <CarouselItem
         className="carouselContent"
@@ -30,4 +30,4 @@ https://lucid.app/lucidchart/850e28d8-cdac-42f8-b2f2-4be8ab5f690a/edit?beaconFlo
           <CarouselCaption className="carouselText" captionText={item.name}/>
       </CarouselItem>
   ));
-  `````
+  ```
