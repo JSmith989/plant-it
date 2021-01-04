@@ -11,7 +11,7 @@ export default class Auth extends Component {
 
   render() {
     return (
-      <div className='Auth'>
+      <div className='Auth p-3'>
         <button className='btn btn-warning' onClick={this.loginClickEvent}>
         <i className="fas fa-sign-in-alt"></i> Sign In
         </button>
