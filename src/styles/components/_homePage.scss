@@ -20,9 +20,16 @@
     background-color: rgba(63, 114, 63, 0.76);
 }
 
-.descript, .gardenCard{
+.gardenCard{
     background-color: rgba(146, 28, 28, 0.781);
     border-radius: 30px;
+}
+
+.descript {
+  background-color: rgba(146, 28, 28, 0.781);
+  border-radius: 15px;
+  margin-left: 125px;
+  margin-right: 125px;
 }
 
 .nav-text {
@@ -35,37 +42,111 @@
     }
   }
   
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 619px) {
     .homePageImg{
-      height: 350px;
+      height: 390px;
     }
   }
   
   @media only screen and (min-width: 768px) {
     .homePageImg{
-      height: 450px;
+      height: 485px;
     }
   }
   
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 892px) {
     .homePageImg{
-      height: 500px;
+      height: 550px;
+    }
+  }
+
+  @media only screen and (min-width: 975px) {
+    .homePageImg{
+      height: 615px;
     }
   }
   
   @media only screen and (min-width: 1100px) {
     .homePageImg{
-      height: 575px;
+      height: 675px;
     }
   }
   
   @media only screen and (min-width: 1400px) {
     .homePageImg{
-      height: 605px;
+      height: 690px;
     }
   }
-  @media only screen and (min-width: 1600px) {
+  @media only screen and (min-width: 1550px) {
     .homePageImg{
-      height: 705px;
+      height: 725px;
+    }
+  }
+
+  .homeGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1px;
+  }
+
+  @media only screen and (max-width: 375px) {
+    .broccoli {
+      height: 200px;
+      
+    }
+  }
+  
+  @media only screen and (min-width: 619px) {
+    .broccoli {
+      height: 390px;
+      margin:0 0 0 -60px;
+    }
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .broccoli {
+      height: 485px;
+      margin:0 0 0 -90px;
+    }
+  }
+  
+  @media only screen and (min-width: 892px) {
+    .broccoli {
+      height: 485px;
+      margin:0 0 0 -30px;
+    }
+  }
+
+  @media only screen and (min-width: 975px) {
+    .broccoli {
+      height: 500px;
+      margin:0 0 0 -30px;
+    }
+  }
+  
+  @media only screen and (min-width: 1100px) {
+    .broccoli {
+      height: 550px;
+      margin:0 0 0 0px;
+    }
+  }
+
+  @media only screen and (min-width: 1300px) {
+    .broccoli {
+      height: 560px;
+      margin:0 0 0 10px;
+    }
+  }
+  
+  @media only screen and (min-width: 1400px) {
+    .broccoli {
+      height: 590px;
+      margin:0 0 0 10px;
+    }
+  }
+  @media only screen and (min-width: 1550px) {
+    .broccoli {
+      height: 700px;
+      margin:0 0 0 -10px;
     }
   }
