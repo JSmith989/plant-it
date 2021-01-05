@@ -22,7 +22,7 @@ export default function Home({ user }) {
       <h1 className="homeTitle">Plant-It!</h1>
       {loadComponent()}
       <p className="descript p-2 border border-white text-white">
-      Organize your backyard garden with this app that allows you to create your own garden and add plants. You can add notes and pictures of your plants and gardens. You can see an example of some of the features in the pictures below.</p>
+      Organize your backyard garden with this app that allows you to create your own garden and add plants. You can add notes and pictures of your plants and gardens. You can see an example of some of the features in the pictures below. Sign in to use the app.</p>
 
       <div className="homeGrid">
         <img className="broccoli" alt="broccoli" src="https://user-images.githubusercontent.com/67443077/103599823-a5af7880-4ecb-11eb-9b1a-b677174cc850.png"></img>
